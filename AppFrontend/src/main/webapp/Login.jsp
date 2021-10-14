@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=iso-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 	
 	<head>
-		<meta charset="ISO-8859-1">
+		<meta charset="iso-8859-1">
 		<title> Formulario de Ingreso </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Grupo83">
@@ -13,7 +13,14 @@
         
         <!-- Link archivo de estilos css -->
         <link rel="stylesheet" href="./CSS/Login.css">		 
-		<style type="text/css">  </style> <!--indica que el contenido es CSS -->
+		<style type="text/css">
+		body,td,th {
+    font-family: Overpass, sans-serif;
+}
+body {
+    background-color: #BAE6EF;
+}
+        </style> <!--indica que el contenido es CSS -->
         
         <script type="text/javascript"> 
 	        function mostrarMensaje() {
@@ -22,10 +29,12 @@
         </script>
 	</head>
 	<body>
+		<div class="titulo"> <img src="Img/Logo fuerza drone completo v08072021.png" alt="" width="314" height="68" align="absmiddle"/></div>
 		<div id="contenedor">
             <div id="central">
                 <div id="login">
-                    <div class="titulo"> Bienvenido </div>
+                    
+					<div class="titulo"> Bienvenido</div>
                     <div class="titulo2"> a su Tienda Virtual </div>
                     
                     <form id="loginform" action="./Login_Servlet" method="get">

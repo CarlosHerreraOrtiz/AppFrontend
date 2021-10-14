@@ -39,4 +39,24 @@
     <servlet-name>Proveedores</servlet-name>
     <url-pattern>/Proveedores</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Productos</display-name>
+    <servlet-name>Productos</servlet-name>
+    <servlet-class>Servlet.Productos</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Productos</servlet-name>
+    <url-pattern>/Productos</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TestJSON_Productos</display-name>
+    <servlet-name>TestJSON_Productos</servlet-name>
+    <servlet-class>Servlet.TestJSON_Productos</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestJSON_Productos</servlet-name>
+    <url-pattern>/TestJSON_Productos</url-pattern>
+  </servlet-mapping>
 </web-app>
