@@ -2,15 +2,16 @@ package Servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
 
 
 @WebServlet("/Controlador")
@@ -20,9 +21,8 @@ public class Controlador extends HttpServlet {
 
 	// *****variables generales dentro de la clase contralador
 	// *******
-	long subtotal = 0, totalapagar = 0;
-	long codProducto = 0, precio = 0, valor_iva = 0, iva = 0, subtotaliva = 0, acusubtotal = 0;
-	long numfac = 0;
+	double subtotal = 0, totalapagar = 0, precio = 0, valor_iva = 0, iva = 0, subtotaliva = 0, acusubtotal = 0;
+	long codProducto = 0, numfac = 0;
 	int cantidad = 0, item = 0;
 	String descripcion, cedulaCliente;
 	List<Detalle_Venta> listaVentas = new ArrayList<>();
@@ -81,10 +81,10 @@ public class Controlador extends HttpServlet {
 				throws ServletException, IOException {
 			for (int i = 0; i < listaVentas.size(); i++) {
 				detalle_venta = new Detalle_Venta();
-				detalle_venta.setCodigo_detalle_venta(String.valueOf(i + 1));
+				detalle_venta.setCodigo_detalle_venta(i + 1);
 				detalle_venta.setCodigo_venta(numFact);
-				detalle_venta.setCodigo_producto(listaVentas.get(i).getCodigo_producto());
 				detalle_venta.setCantidad_producto(listaVentas.get(i).getCantidad_producto());
+				detalle_venta.setCodigo_producto(listaVentas.get(i).getCodigo_producto());
 				detalle_venta.setValor_total(listaVentas.get(i).getValor_total());
 				detalle_venta.setValor_venta(listaVentas.get(i).getValor_venta());
 				detalle_venta.setValor_iva(listaVentas.get(i).getValor_iva());
@@ -555,14 +555,14 @@ public class Controlador extends HttpServlet {
 				totalapagar = 0;
 				codProducto = Long.parseLong(request.getParameter("codigoproducto"));
 				descripcion = request.getParameter("nombreproducto");
-				precio = Long.parseLong(request.getParameter("precioproducto"));
+				precio = Double.parseDouble(request.getParameter("precioproducto"));
 				cantidad = Integer.parseInt(request.getParameter("cantidadproducto"));
-				iva = Long.parseLong(request.getParameter("ivaproducto"));
+				iva = Double.parseDouble(request.getParameter("ivaproducto"));
 
 				subtotal = (precio * cantidad);
 				valor_iva = subtotal * iva / 100;
 				// almacena temporalmente cada producto
-				detalle_venta.setCodigo_detalle_venta(String.valueOf(item));
+				detalle_venta.setCodigo_detalle_venta(item);
 				detalle_venta.setCodigo_producto(codProducto);
 				detalle_venta.setDescripcion_producto(descripcion);
 				detalle_venta.setPrecio_producto(precio);

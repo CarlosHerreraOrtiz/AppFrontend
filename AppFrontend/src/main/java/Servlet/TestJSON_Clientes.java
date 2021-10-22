@@ -19,8 +19,8 @@ public class TestJSON_Clientes {
 
 
 	private static URL url;
-	private static String sitio = "http://localhost:5000/";
-	
+//	private static String sitio = "http://localhost:5000/";
+	private static String sitio = "http://localhost:8080/backtienda_fuerzadrone-0.0.1-SNAPSHOT/";
 	public static ArrayList<Clientes> parsingClientes(String json) throws ParseException {
 		JSONParser jsonParser = new JSONParser();
 		ArrayList<Clientes> lista = new ArrayList<Clientes>();

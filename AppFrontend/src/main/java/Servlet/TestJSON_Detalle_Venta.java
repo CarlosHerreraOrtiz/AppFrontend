@@ -10,7 +10,8 @@ import java.nio.charset.StandardCharsets;
 public class TestJSON_Detalle_Venta {
 
 	private static URL url;
-	private static String sitio = "http://localhost:5000/";
+//	private static String sitio = "http://localhost:5000/";
+	private static String sitio = "http://localhost:8080/backtienda_fuerzadrone-0.0.1-SNAPSHOT/";
 	
 	public static int postJSON(Detalle_Venta detalle_venta) throws IOException {
 

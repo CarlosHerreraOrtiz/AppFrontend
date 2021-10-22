@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
 				<div class="card">
 					<div class="card-body">
 						<div class="form-group">
-							<label> Datos Clientes</label>
+							<label> Datos Clientes</label>     
 						</div>
 						<input type="hidden" name="menu" value="Ventas"> 
 						<input type="hidden" name="UsuarioActivo" value="${usuarioSeleccionado.getCedula_usuario()}" >
@@ -71,7 +71,7 @@
 						</div>
 						<div class="form-group d-flex">
 							<input type="submit" name="accion" value="AgregarProducto"
-								class="btn btn-outline-dark">
+								class="btn btn btn-warning">
 						</div>
 					</div>
 				</div>

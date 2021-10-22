@@ -3,7 +3,7 @@ package Servlet;
 
 public class Detalle_Venta {
 
-	private String codigo_detalle_venta;
+	private long codigo_detalle_venta;
 	private Integer cantidad_producto;
 	private String descripcion_producto; //temporal
 	private long codigo_producto;
@@ -14,10 +14,10 @@ public class Detalle_Venta {
 	private double precio_producto; //temporal
 	
 	
-	public String getCodigo_detalle_venta() {
+	public long getCodigo_detalle_venta() {
 		return codigo_detalle_venta;
 	}
-	public void setCodigo_detalle_venta(String codigo_detalle_venta) {
+	public void setCodigo_detalle_venta(long codigo_detalle_venta) {
 		this.codigo_detalle_venta = codigo_detalle_venta;
 	}
 	public Integer getCantidad_producto() {

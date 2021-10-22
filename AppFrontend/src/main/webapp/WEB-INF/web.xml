@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
   <display-name>AppFrontend</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -9,54 +9,4 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <description></description>
-    <display-name>TestJSON_Clientes</display-name>
-    <servlet-name>TestJSON_Clientes</servlet-name>
-    <servlet-class>Servlet.TestJSON_Clientes</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>TestJSON_Clientes</servlet-name>
-    <url-pattern>/TestJSON_Clientes</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>Clientes</display-name>
-    <servlet-name>Clientes</servlet-name>
-    <servlet-class>Servlet.Clientes</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Clientes</servlet-name>
-    <url-pattern>/Clientes</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>Proveedores</display-name>
-    <servlet-name>Proveedores</servlet-name>
-    <servlet-class>Servlet.Proveedores</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Proveedores</servlet-name>
-    <url-pattern>/Proveedores</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>Productos</display-name>
-    <servlet-name>Productos</servlet-name>
-    <servlet-class>Servlet.Productos</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Productos</servlet-name>
-    <url-pattern>/Productos</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>TestJSON_Productos</display-name>
-    <servlet-name>TestJSON_Productos</servlet-name>
-    <servlet-class>Servlet.TestJSON_Productos</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>TestJSON_Productos</servlet-name>
-    <url-pattern>/TestJSON_Productos</url-pattern>
-  </servlet-mapping>
 </web-app>

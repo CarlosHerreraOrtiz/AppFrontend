@@ -18,7 +18,8 @@ import org.json.simple.parser.ParseException;
 public class TestJSON_Ventas {
 	
 	private static URL url;
-	private static String sitio = "http://localhost:5000/";
+//	private static String sitio = "http://localhost:5000/";
+	private static String sitio = "http://localhost:8080/backtienda_fuerzadrone-0.0.1-SNAPSHOT/";
 	
 	public static int postJSON(Ventas ventas) throws IOException {
 
@@ -88,11 +89,11 @@ public class TestJSON_Ventas {
 				JSONObject innerObj = (JSONObject) i.next();
 				Ventas venta = new Ventas();
 				venta.setCodigo_venta(Long.parseLong(innerObj.get("numerofactura").toString())); // convertir de String // a Long
-				venta.setCedula_cliente(Long.parseLong(innerObj.get("direccion_venta").toString()));
-				venta.setCedula_usuario(Long.parseLong(innerObj.get("email_venta").toString()));
-				venta.setIva_venta(Double.parseDouble(innerObj.get("nombre_venta").toString()));
-				venta.setTotal_venta(Double.parseDouble(innerObj.get("telefono_venta").toString()));
-				venta.setValor_venta(Double.parseDouble(innerObj.get("telefono_venta").toString()));
+				venta.setCedula_cliente(Long.parseLong(innerObj.get("cedulacliente").toString()));
+				venta.setCedula_usuario(Long.parseLong(innerObj.get("UsuarioActivo").toString()));
+				venta.setIva_venta(Double.parseDouble(innerObj.get("txttotaliva").toString()));
+				venta.setTotal_venta(Double.parseDouble(innerObj.get("txttotalapagar").toString()));
+				venta.setValor_venta(Double.parseDouble(innerObj.get("txtsubtotal").toString()));
 				lista.add(venta);
 			}
 			return lista;
